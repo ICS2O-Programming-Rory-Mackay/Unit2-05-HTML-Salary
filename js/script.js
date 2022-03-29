@@ -14,10 +14,10 @@ const TAX_BRACKET = 0.1805
 function payClicked () {
   // get user input
   let hours = parseFloat(document.getElementById('hours').value)
-  let rate = parseFloat(document.getElementById('rate').value)
+  let wage = parseFloat(document.getElementById('wage').value)
 
   // calculate the pay and the tax
-  let total_pay = hours * rate
+  let total_pay = hours * wage
   let tax = TAX_BRACKET * total_pay
 	let total_earned = total_pay - tax 
 
