@@ -1,68 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Area with JavaScript" />
-    <meta name="keywords" content="immaculata, ics2o" />
-    <meta name="author" content="Rory Mackay" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav1_index/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav1_index/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav1_index/favicon-16x16.png" />
-    <link rel="manifest" href="./fav1_index/site.webmanifest" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Income Tax, With JS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Ms Raffin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Income Tax, with JS</title>
   </head>
   <body>
     <script src="./js/script.js"></script>
-      <h1>Income Tax, With JS</h1>
-        <h2>Please enter Your Employment Info</h2>
-        <h3>A = (B x H) / 2</h3>
-        <!-- Simple Textfield -->
-        <form action="#">
-          <br></br>
-          <p>Base</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="length-of-rectangle"
-            />
-            <label class="mdl-textfield__label" for="length-of-rectangle">length ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <p>Height</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="width-of-rectangle"
-            />
-            <label class="mdl-textfield__label" for="width-of-rectangle">width ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
-          Calculate
-        </button>
-        <br />
-        <p>
-          <div id="answers">
-            <div id="area"></div>
-          </div>
-        </p>
-      </main>
-    </div>
+    <h1>Income Tax, with JS</h1>
+      <h2>Please enter your job information below</h2>
+      <form action="javascript:payClicked()">
+        <label for="Hours">Amount of Hours Worked:</label>
+        <input type="number" step="any" id="hours" placeholder="Hours"><br><br>
+        <label for="hourly-wage">Wage Per Hour</label>
+        <input type="number" step="any" id="rate" placeholder="Hourly Wage"><br><br>
+        <input type="submit" value="Pay">
+      </form>
+		<!-- Create a space where the user information will be displayed -->
+		<div id="display-results">
+    	<div id="total-earned"></div>
+			<div id="tax"></div>
+		</div>
   </body>
 </html>
