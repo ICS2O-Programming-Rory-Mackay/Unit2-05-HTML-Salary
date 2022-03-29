@@ -22,6 +22,6 @@ function payClicked () {
 	let total_earned = total_pay - tax 
 
   // display the results
-  document.getElementById('total-earned').innerHTML = "Your pay will be $" + total_earned.toFixed(2)
-  document.getElementById('tax').innerHTML = "The government will take $" + tax.toFixed(2)
+  document.getElementById('total-earned').innerHTML = "After tax, your pay will be $" + total_earned.toFixed(2)
+  document.getElementById('tax').innerHTML = "At least we have free healthcare, because the government will steal $" + tax.toFixed(2)
 }
